@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Paris</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+
+    h3 {
+        color: #3c5990;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    ol.myOL {
+        display: inline-block;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Paris</h1>
+        <br>
+        <figure>
+            <img src="images/paris(main).png" alt="Paris">
+            <figcaption>Uma das melhores vistas de Paris</figcaption>
+        </figure>
+    </header>
+
+    <nav>
+        <p>
+            <button type="button"><a href="index.html">Introdução</a></button>
+            <button type="button"><a href="local.html">Localização</a></button>
+            <button type="button"><a href="multimedia.html">Multimedia</a></button>
+            <button type="button"><a href="info.html">Informação</a></button>
+            <button type="button"><b><a href="quizz.html">Quizzes</a></b></button>
+        </p>
+    </nav>
+
+    <main>
+        <h3>Quizz</h3>
+        <p>Testa os teus conhecimentos com o seguinte quizz!</p>
+        <p>Será que conheces mesmo esta cidade?</p>
+        <form action="form.html" method="get">
+            <center>
+            <fieldset style="width:500px">
+                <legend><strong>Paris Quizz</strong></legend>
+                <p>Nome: <input type="text" name="nome"></p>
+                <p>Apelido: <input type="text" name="apelido"></p>
+                <p>Email: <input type="text" name="email"></p>
+                <input type="submit">
+            </fieldset>
+            </center>
+            <br>
+            <center>
+                <fieldset style="width:500px">
+                <p>Qual é o nome do museu que abriga a Mona Lisa?</p>
+                <input type="text" name="resposta">
+
+                <center>
+                    <table>
+                        <tr>
+                            <p>Qual é o nome do rio que atravessa Paris?</p>
+                        </tr>
+                        <tr>
+                            <td>Scheldt<input type="radio" name=""></td>
+                            <td>Sûre<input type="radio" name=""></td>
+                            <td>Sena<input type="radio" name=""></td>
+                        </tr>
+                    </table>
+                </center>
+
+                <p>Em que data foi inaugurada a Torre Eiffel?</p>
+                <input type="date" name="data">
+
+                <p>Qual destes monomentos não está localizado em Paris</p>
+                <a href="https://en.wikipedia.org/wiki/G%C3%ABlle_Fra"><input type="image" name="Sacre-Coeur" src="images/img-q1.png"></a>
+                <input type="checkbox" name="seleciona">
+                <a href="https://www.tudosobreparis.com/sacre-coeur"><input type="image" name="Dama de Ouro" src="images/img2-q1.png"></a>
+                <input type="checkbox" name="seleciona">
+
+                <p>Quantas igrejas exitem em Paris</p>
+                <input type="number" name="quantidade" min="90" max="150">
+
+                <p>Qual é a cor predominante dos toldos que decoram os cafés na famosa região de Montmartre, em Paris?</p>
+                <input type="color" name="cor">
+
+                <p>Qual é a distância aproximada em quilômetros percorrida durante uma caminhada ao longo da margem 
+                    esquerda do rio Sena em Paris, partindo da Torre Eiffel até a Catedral de Notre-Dame?</p>
+                <input type="range" name="range" min="0" max="10">
+            </fieldset>
+            </center>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Joana Okica a22102756 ULHT 2ºano</p>
+    </footer>
+</body>
+
+</html>

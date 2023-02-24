@@ -1,54 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-       <title>Paris</title> 
-       <meta charset="utf-8">
-       <meta name="author" content="Joana Okica">
-       <meta name="description" content="Website sobre Paris">
-       <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
-    </head>
 
-    <style>
-        body { text-align: center; }
-        
-        h3 { color: #3c5990; }
+<head>
+    <title>Paris</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
 
-        p {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-right: 100px;
-            margin-left: 100px;
+    <script>
+        function mensagem(){
+            alert("Fui pressionado!")
         }
-    </style>
+    </script>
+</head>
 
-    <body>
+<style>
+    body {
+        text-align: center;
+    }
+
+    h3 {
+        color: #3c5990;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+</style>
+
+<body>
+    <header>
         <h1>Paris</h1>
-        <img src="images/paris(main).png" alt="MainPic">
-
         <br>
-
-        <p> 
-            <button type="button"><a href ="index.html">Introdução</a></button>
-            <button type="button"><a href="local.html"><b>Localização</b></a></button>
+        <figure>
+            <img src="images/paris(main).png" alt="Paris">
+            <figcaption>Uma das melhores vistas de Paris</figcaption>
+        </figure>
+    </header>
+    
+    <nav>
+        <p>
+            <button type="button"><b><a href="index.html">Introdução</a></b></button>
+            <button type="button"><a href="local.html">Localização</a></button>
             <button type="button"><a href="multimedia.html">Multimedia</a></button>
             <button type="button"><a href="info.html">Informação</a></button>
         </p>
+    </nav>
 
+    <main>
         <h2>Localização</h2>
-        <h3>Onde é?</h3>
-        
-        <p>
-        Paris está localizada no norte da França, na região da Île-de-France, que é atravessada pelo rio Sena. 
-        As coordenadas geográficas de Paris são 48.8566° N, 2.3522° E.
-        <br>
-        A cidade tem uma área total de 105,4 km² e uma população de mais de 2,1 milhões de pessoas em sua área metropolitana, 
-        tornando-a a maior cidade da França e uma das maiores da Europa. 
-        Paris é cercada por vários subúrbios e cidades satélites, conhecidos como banlieues, e é um importante centro cultural, político,
-        financeiro e comercial, atraindo milhões de turistas todos os anos.
-        </p>
-        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457405352!2d2.2769947256697916!3d48.85894658153241!2m3!1f0!2f0!3f0!
+
+        <section>
+            <h3>Onde é?</h3>
+
+            <p>
+                Paris está localizada no norte da França, na região da Île-de-France, que é atravessada pelo rio Sena.
+                As coordenadas geográficas de Paris são 48.8566° N, 2.3522° E.
+                <br>
+                A cidade tem uma área total de 105,4 km² e uma população de mais de 2,1 milhões de pessoas em sua área
+                metropolitana,
+                tornando-a a maior cidade da França e uma das maiores da Europa.
+                Paris é cercada por vários subúrbios e cidades satélites, conhecidos como banlieues, e é um importante
+                centro cultural, político,
+                financeiro e comercial, atraindo milhões de turistas todos os anos.
+            </p>
+        </section>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.76457405352!2d2.2769947256697916!3d48.85894658153241!2m3!1f0!2f0!3f0!
         3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2zUGFyaXMsIEZyYW7Dp2E!5e0!3m2!1spt-PT!2spt!4v1676675844161!5m2!1spt-PT!2spt"
-         width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </body>
+            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+    <footer>
+        <p>Joana Okica a22102756 ULHT 2ºano</p>
+    </footer>
+
+</body>
 </html>
