@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lobster&family=Source+Serif+Pro&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgba(228, 229, 231, 1);
+}
+
+h3 {
+    font-family: 'Gloock', serif;
+    color: #3c5990;
+}
+
+#f1 {
+    background-color: rgba(237, 240, 253, 1);
+}
+
+#f2 {
+    background-color: rgba(205, 213, 249, 1);
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+ol.myOL {
+    display: inline-block;
+    text-align: left;
+}
+
+.tooltip {
+    /*vou deixar como relative caso no futuro tenha outros elementos nesta zona
+    assim este sempre se destaca*/
+    position: relative;
+    /*O texto apenas aparece quando o rato passa por cima da imagem*/
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+textarea::grammar-error {
+    text-decoration: wavy red;
+    color: red;
+}
+
+textarea::spelling-error {
+    text-decoration: wavy red;
+}
+
+#styleButton {
+    font-family: 'Source Serif Pro', serif;
+}
+
+footer {
+    background: rgba(179, 181, 188, 1);
+}
+
+.navbar {
+    background-color: rgba(179, 181, 188, 1);
+    overflow: hidden;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    /*Display inline-block permite que quando a pagina é minimizada continue tudo alinhado 
+    e nao ficarem as coisas em cima das outras*/
+    display: inline-block;
+}
+
+.navbar a:hover {
+    background-color: rgba(235, 235, 235, 1);
+    color: black;
+}
+
+.navbar a.active {
+    background-color: rgba(207, 207, 207, 1);
+    color: black;
+}
+
+.buttonstyle {
+    border-radius: 6px;
+    display: inline-block;
+    background-color: rgba(179, 181, 188, 1);
+    border: none;
+}
+
+.crazy:hover {
+    /*um hover colorido dá sempre jeito!*/
+    background-color: lightblue;
+}
+
+.formatacao {
+    display: block;
+    text-align: unset;
+}
+
+img {
+    border: 1px solid black;
+}
+
+[target="blank_"] {
+    color: olivedrab;
+}
+
+#csstable {
+    border: #3c5990;
+}

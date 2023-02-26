@@ -7,38 +7,35 @@
     <meta name="author" content="Joana Okica">
     <meta name="description" content="Website sobre Paris">
     <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link rel="stylesheet" href="estilos.css">
 </head>
-
-<style>
-    body {
-        text-align: center;
-    }
-
-    h3 {
-        color: #3c5990;
-    }
-</style>
 
 <body>
     <header>
-        <h1>Paris</h1>
+        <h1 id="pageTitle">Paris</h1>
         <br>
         <figure>
-            <img src="images/paris(main).png" alt="Paris">
-            <figcaption>Uma das melhores vistas de Paris</figcaption>
+            <div class="tooltip">
+                <img src="images/paris(main).png" alt="Paris">
+                <span class="tooltiptext">
+                    <figcaption>Uma das melhores vistas de Paris</figcaption>
+                </span>
+            </div>
         </figure>
     </header>
 
-    <nav>
-        <p>
-            <button type="button"><b><a href="index.html">Introdução</a></b></button>
-            <button type="button"><a href="local.html">Localização</a></button>
-            <button type="button"><a href="multimedia.html">Multimedia</a></button>
-            <button type="button"><a href="info.html">Informação</a></button>
-            <button type="button"><a href="quizz.html">Quizzes</a></button>
-        </p>
-    </nav>
-
+    <div class="navbar">
+        <nav>
+            <p>
+                <a href="index.html" id="styleButton">🧐 Introdução</a>
+                <a href="local.html" id="styleButton">🗺 Localização</a>
+                <a href="multimedia.html" id="styleButton">🎬 Multimedia</a>
+                <b><a href="info.html" id="styleButton" class="active">🔍 Informação</a></b>
+                <a href="quizz.html" id="styleButton">📋 Quizzes</a>
+                <a href="html5-css.html" id="styleButton">🧙 HTML5 & CSS</a>
+            </p>
+        </nav>
+    </div>
     <main>
         <h2>Informação</h2>
         <section>
@@ -47,73 +44,91 @@
             <center>
                 <table border="1" summary="Paris attractions">
                     <tr>
-                        <th>
+                        <th class="crazy">
                             <center>Best attractions</center>
                         </th>
-                        <th>
+                        <th class="crazy">
                             <center>Best Food places</center>
+                        </th>
+                        <th class="crazy">
+                            <center>Cost</center>
+                        </th>
+                        <th rowspan="6" class="crazy">
+                            <center><textarea name="" id="" cols="10" rows="10" placeholder="Notas"></textarea></center>
                         </th>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://en.chateauversailles.fr/">Versailles</a>
+                                <a href="https://en.chateauversailles.fr/" target="_blank">Versailles</a>
                                 <input type="checkbox" id="" name="" checked>
                             </center>
                         </td>
 
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://yoom.fr/">Yoom</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="https://yoom.fr/" target="_blank">Yoom</a>
+                                <input type="checkbox" id="" name="YoomRestaurante" checked>
                             </center>
                         </td>
+
+                        <td class="crazy"><input type="number" min="0" value="500"></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://www.centrepompidou.fr/en/">Pompidou Center</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="https://www.centrepompidou.fr/en/" target="_blank">Pompidou Center</a>
+                                <input type="checkbox" id="" name="Museu" checked>
                             </center>
                         </td>
 
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="http://restaurants-soma.fr/">Soma Sando</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="http://restaurants-soma.fr/" target="_blank">Soma Sando</a>
+                                <input type="checkbox" id="" name="Restaurante" checked>
                             </center>
                         </td>
+                        <td class="crazy"><input type="number" min="0" value="500"></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://www.toureiffel.paris/fr">Eiffel Tower</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="https://www.toureiffel.paris/fr" target="_blank">Eiffel Tower</a>
+                                <input type="checkbox" id="" name="TorreEifel" checked>
                             </center>
                         </td>
 
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://www.nekoramen.fr/">Neko Ramen</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="https://www.nekoramen.fr/" target="_blank">Neko Ramen</a>
+                                <input type="checkbox" id="" name="NekoRestaurant" checked>
                             </center>
                         </td>
+                        <td class="crazy"><input type="number" min="0" value="500"></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://www.routeparis.com/jardin-du-luxembourg">Jardin du Luxembourg</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="https://www.routeparis.com/jardin-du-luxembourg" target="_blank">Jardin du
+                                    Luxembourg</a>
+                                <input type="checkbox" id="" name="RouteParis" checked>
                             </center>
                         </td>
 
-                        <td>
+                        <td class="crazy">
                             <center>
-                                <a href="https://www.rolls.paris/">Rolls</a>
-                                <input type="checkbox" id="" name="" checked>
+                                <a href="https://www.rolls.paris/" target="_blank">Rolls</a>
+                                <input type="checkbox" id="" name="RollsRestaurante" checked>
                             </center>
                         </td>
-
+                        <td class="crazy"><input type="number" min="0" value="500"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" class="crazy">
+                            <center><a href="https://www.booking.com/hotel/fr/hotel-ami-paris.pt-pt.html?auth_success=1"
+                                    target="_blank">Search Hotels</a></center>
+                        </th>
+                        <td class="crazy"><input type="number" min="0" value="1500"></td>
                     </tr>
                 </table>
             </center>
@@ -121,8 +136,12 @@
 
         <p>Advice: se conseguires anda a pé em vez de apanhares transportes públicos. Thank me later😀</p>
     </main>
+
+
     <footer>
-        <p>Joana Okica a22102756 ULHT 2ºano</p>
+        <p>
+            Joana Okica - a22102756 - ULHT - 2023
+        </p>
     </footer>
 </body>
 

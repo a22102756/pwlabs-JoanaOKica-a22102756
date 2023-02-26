@@ -7,112 +7,158 @@
     <meta name="author" content="Joana Okica">
     <meta name="description" content="Website sobre Paris">
     <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="iconRepository" href="https://www.w3schools.com/icons/icons_reference.asp">
+
+    <script>
+        function mensagem() {
+            alert("Tem a certeza que quer dar reset as suas respostas")
+        }
+    </script>
 </head>
-
-<style>
-    body {
-        text-align: center;
-    }
-
-    h3 {
-        color: #3c5990;
-    }
-
-    p {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-right: 100px;
-        margin-left: 100px;
-    }
-
-    ol.myOL {
-        display: inline-block;
-        text-align: left;
-    }
-</style>
 
 <body>
     <header>
-        <h1>Paris</h1>
+        <h1 id="pageTitle">Paris</h1>
         <br>
         <figure>
-            <img src="images/paris(main).png" alt="Paris">
-            <figcaption>Uma das melhores vistas de Paris</figcaption>
+            <div class="tooltip">
+                <img src="images/paris(main).png" alt="Paris">
+                <span class="tooltiptext">
+                    <figcaption>Uma das melhores vistas de Paris</figcaption>
+                </span>
+            </div>
         </figure>
     </header>
 
-    <nav>
-        <p>
-            <button type="button"><a href="index.html">Introdução</a></button>
-            <button type="button"><a href="local.html">Localização</a></button>
-            <button type="button"><a href="multimedia.html">Multimedia</a></button>
-            <button type="button"><a href="info.html">Informação</a></button>
-            <button type="button"><b><a href="quizz.html">Quizzes</a></b></button>
-        </p>
-    </nav>
-
+    <div class="navbar">
+        <nav>
+            <p>
+                <a href="index.html" id="styleButton">🧐 Introdução</a>
+                <a href="local.html" id="styleButton">🗺 Localização</a>
+                <a href="multimedia.html" id="styleButton">🎬 Multimedia</a>
+                <a href="info.html" id="styleButton">🔍 Informação</a>
+                <b><a href="quizz.html" id="styleButton" class="active">📋 Quizzes</a></b>
+                <a href="html5-css.html" id="styleButton">🧙 HTML5 & CSS</a>
+            </p>
+        </nav>
+    </div>
     <main>
-        <h3>Quizz</h3>
-        <p>Testa os teus conhecimentos com o seguinte quizz!</p>
-        <p>Será que conheces mesmo esta cidade?</p>
-        <form action="form.html" method="get">
-            <center>
-                <fieldset style="width:500px">
-                    <legend><strong>Paris Quizz</strong></legend>
-                    <p>Nome: <input type="text" name="nome"></p>
-                    <p>Apelido: <input type="text" name="apelido"></p>
-                    <p>Email: <input type="text" name="email"></p>
-                    <input type="submit">
+        <h2>Quizzes</h2>
+
+        <section>
+            <h3>Quizz</h3>
+            <p>Testa os teus conhecimentos com o seguinte quizz!</p>
+            <p>Será que conheces mesmo esta cidade?</p>
+        </section>
+        <section>
+            <form method="POST" action="mailto: a22102756@alunos.ulht.pt" enctype="multipart/form-data">
+                <center>
+                    <fieldset style="width:500px" id="f1">
+                        <legend><strong>Paris Quizz</strong></legend>
+                        <fieldset id="f2" class="formatacao">
+                            <legend><strong>Info</strong></legend>
+                            <p>Nome: <input type="text" name="nome" placeholder="Insira o seu nome" size="20" autofocus
+                                    required></p>
+                            <p>Apelido: <input type="text" name="apelido" placeholder="Insira o seu apelido" size="19"
+                                    required></p>
+                            <p>Email: <input type="email" name="email" autocomplete="off"
+                                    placeholder="Insira o seu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    required></p>
+                            <input type="submit">
+                        </fieldset>
+                        <br>
+                        <fieldset style="width:500px" id="f2" class="formatacao">
+                            <label>Qual é o nome do museu que abriga a Mona Lisa?</label>
+                            <input type="text" name="resposta" placeholder="Resposta" pattern="[A-Za-z]{15}">
+
+                            <center>
+                                <table>
+                                    <tr>
+                                        <label>Qual é o nome do rio que atravessa Paris?</label>
+                                    </tr>
+                                    <tr>
+                                        <td>Scheldt<input type="radio" name=""></td>
+                                        <td>Sûre<input type="radio" name=""></td>
+                                        <td>Sena<input type="radio" name=""></td>
+                                    </tr>
+                                </table>
+                            </center>
+
+                            <label>Em que data foi inaugurada a Torre Eiffel?</label>
+                            <input type="date" name="data">
+
+                            <label>Seleciona somente os monumentos localizados em Paris</label>
+                            <a href="https://en.wikipedia.org/wiki/G%C3%ABlle_Fra"><input type="image"
+                                    name="Sacre-Coeur" src="images/img-q1.png"></a>
+                            <input type="checkbox" name="seleciona">
+                            <a href="https://www.tudosobreparis.com/sacre-coeur"><input type="image" name="Dama de Ouro"
+                                    src="images/img2-q1.png"></a>
+                            <input type="checkbox" name="seleciona">
+                            <a href="https://pt.wikipedia.org/wiki/Catedral_de_Notre-Dame_de_Paris"><input type="image"
+                                    name="Notre Dame" src="images/img3-q1.png"></a>
+                            <input type="checkbox" name="seleciona">
+
+                            <label>Quantas igrejas exitem em Paris</label>
+                            <input type="number" name="quantidade" min="90" max="150" placeholder="0">
+
+                            <label>Qual é a cor predominante dos toldos que decoram os cafés na famosa região de
+                                Montmartre,
+                                em Paris?</label>
+                            <input type="color" name="cor">
+
+                            <label for="food-choice">Qual o prato típico de Paris que consiste em um bife coberto com um
+                                ovo
+                                frito e servido com fritas?</label>
+                            <input list="food-options" id="food-choice" name="food-choice" placeholder="Resposta">
+
+                            <datalist id="food-options">
+                                <option value="Coq au Vin">
+                                <option value="Croissant">
+                                <option value="Ratatouille">
+                                <option value="Boeuf Bourguignon">
+                                <option value="Steak Frites">
+                            </datalist>
+
+                            <label>Qual destes artistas viveram em Paris e frequentavam o famoso bairro de
+                                Montmartre?</label>
+                            <select name="artistas" multiple>
+                                <option>Claude Monet</option>
+                                <option>Pablo Picasso</option>
+                                <option>Gerhard Richter</option>
+                                <option>Wassily Kandinsky</option>
+                                <option>Henri Matisse</option>
+                            </select>
+
+                            <label>Qual é a distância aproximada em quilômetros percorrida durante uma caminhada ao
+                                longo da
+                                margem
+                                esquerda do rio Sena em Paris, partindo da Torre Eiffel até a Catedral de
+                                Notre-Dame?</label>
+                            <input type="range" name="range" min="0" max="10">
+
+                            <p>
+                                <textarea name="Review" id="review" cols="35" rows="10"
+                                    placeholder="Comente o que achou do questionário. A sua opinião será mantida anónima"></textarea>
+                            </p>
+                            <button type="submit" value="Submit">Submit</button>
+                            <button type="reset" value="Reset">Reset</button>
+                        </fieldset>
+                </center>
                 </fieldset>
-            </center>
-            <br>
-            <center>
-                <fieldset style="width:500px">
-                    <p>Qual é o nome do museu que abriga a Mona Lisa?</p>
-                    <input type="text" name="resposta">
 
-                    <center>
-                        <table>
-                            <tr>
-                                <p>Qual é o nome do rio que atravessa Paris?</p>
-                            </tr>
-                            <tr>
-                                <td>Scheldt<input type="radio" name=""></td>
-                                <td>Sûre<input type="radio" name=""></td>
-                                <td>Sena<input type="radio" name=""></td>
-                            </tr>
-                        </table>
-                    </center>
 
-                    <p>Em que data foi inaugurada a Torre Eiffel?</p>
-                    <input type="date" name="data">
 
-                    <p>Qual destes monomentos não está localizado em Paris</p>
-                    <a href="https://en.wikipedia.org/wiki/G%C3%ABlle_Fra"><input type="image" name="Sacre-Coeur"
-                            src="images/img-q1.png"></a>
-                    <input type="checkbox" name="seleciona">
-                    <a href="https://www.tudosobreparis.com/sacre-coeur"><input type="image" name="Dama de Ouro"
-                            src="images/img2-q1.png"></a>
-                    <input type="checkbox" name="seleciona">
+            </form>
 
-                    <p>Quantas igrejas exitem em Paris</p>
-                    <input type="number" name="quantidade" min="90" max="150">
+        </section>
 
-                    <p>Qual é a cor predominante dos toldos que decoram os cafés na famosa região de Montmartre, em
-                        Paris?</p>
-                    <input type="color" name="cor">
-
-                    <p>Qual é a distância aproximada em quilômetros percorrida durante uma caminhada ao longo da margem
-                        esquerda do rio Sena em Paris, partindo da Torre Eiffel até a Catedral de Notre-Dame?</p>
-                    <input type="range" name="range" min="0" max="10">
-                </fieldset>
-            </center>
-
-        </form>
     </main>
 
     <footer>
-        <p>Joana Okica a22102756 ULHT 2ºano</p>
+        <p>
+            Joana Okica - a22102756 - ULHT - 2023
+        </p>
     </footer>
 </body>
 
