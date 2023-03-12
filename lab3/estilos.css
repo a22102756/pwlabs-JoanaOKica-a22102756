@@ -44,7 +44,7 @@ header nav {
 }
 
 header nav a {
-    background-color:#ADD8E6;
+    background-color:#85a8df;
     padding: 20px;
     display: inline-block;
     text-decoration: none;
@@ -58,7 +58,7 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: rgba(207, 207, 207, 1);
+    background-color: #729ff2;
     color: black;
 }
 
@@ -169,7 +169,6 @@ audio {
     border-radius: 10px;
 }
   
-
 .image1{
     background-color: #5F9EA0;
     z-index: 0;
