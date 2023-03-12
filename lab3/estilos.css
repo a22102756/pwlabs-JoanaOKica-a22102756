@@ -214,9 +214,9 @@ audio {
 
 
 .dropC a {
-    padding: 16px 17px;
+    padding: 16px 30px;
     text-decoration: none;
-    display: block;
+    display: flex;
     color: black;
 }
 

@@ -53,7 +53,7 @@
                 "menu  footer   right";
 
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(autofit, minmax(100px, 1fr));
         }
 
         .grid-container>* {
@@ -99,14 +99,14 @@
             <div class="navbar">
                 <a href="index.html">👇🏿 Flex</a>
                 <a href="page1.html">Grid 1</a>
-                <a href="page2.html">Grid 2</a>
-                <b><a href="page3.html" class="active">🕸️ Grid 3</a></b>
+                <b><a href="page2.html">🕸️ Grid 2</a></b>
+                <a href="page3.html" class="active">Grid 3</a>
                 <a href="page4.html">Grid 4</a>
                 <a href="page5.html">Grid 5</a>
                 <a href="page6.html">Grid 6</a>
             </div>
         </nav>
-        <main>Main</main>
+        <main style="background-image: url(https://source.unsplash.com/0J7EnmF1Bzk);  background-size: cover;"></main>
         <aside style="background-image: url(https://source.unsplash.com/wESKMSgZJDo);  background-size: cover;"></aside>
         <div style="background-color: #a69677;">
             <h3>Life is incredibly diverse</h3>
@@ -119,13 +119,13 @@
             <p>Over billions of years, life on Earth has undergone countless transformations and adaptations, driven by
                 natural selection and other evolutionary processes. </p>
         </div>
-        <div style="background-color: #807153;">
+        <div style="background-color: #a69677;">
             <h3>Life is fragile</h3>
             <p>Despite its remarkable diversity and resilience, life is also incredibly fragile. Many species are
                 currently facing extinction due to human activity, ~
                 such as habitat destruction, pollution, and climate change. </p>
         </div>
-        <footer>
+        <footer style="display: flex; justify-content: center; align-items: center; background-image: url(https://source.unsplash.com/UScjLkpDgkw);  color: white;">
             <p>Joana Okica - a22102756 - ULHT</p>
         </footer>
     </div>
