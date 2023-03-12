@@ -13,6 +13,13 @@ h3 {
     color: #3c5990;
 }
 
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
 #f1 {
     background-color: rgba(237, 240, 253, 1);
 }
@@ -21,11 +28,10 @@ h3 {
     background-color: rgba(205, 213, 249, 1);
 }
 
-p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+footer {
+    position: sticky;
+    bottom: 0px;
+    background: rgba(179, 181, 188, 1);
 }
 
 label {
@@ -38,6 +44,7 @@ ol.myOL {
     text-align: left;
 }
 
+/*Imagem principal related*/
 .tooltip {
     /*vou deixar como relative caso no futuro tenha outros elementos nesta zona
     assim este sempre se destaca*/
@@ -48,35 +55,19 @@ ol.myOL {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
-textarea::grammar-error {
-    text-decoration: wavy red;
-    color: red;
-}
-
-textarea::spelling-error {
-    text-decoration: wavy red;
-}
-
-#styleButton {
-    font-family: 'Source Serif Pro', serif;
-}
-
-footer {
-    background: rgba(179, 181, 188, 1);
-}
 
 .navbar {
     background-color: rgba(179, 181, 188, 1);
     overflow: hidden;
+    font-family: 'Source Serif Pro', serif;
 }
-
+/*Navigation bar related*/
 .navbar a {
     color: #f2f2f2;
     padding: 14px 16px;
@@ -86,6 +77,7 @@ footer {
     e nao ficarem as coisas em cima das outras*/
     display: inline-block;
 }
+
 
 .navbar a:hover {
     background-color: rgba(235, 235, 235, 1);
@@ -102,9 +94,20 @@ footer {
     display: inline-block;
     background-color: rgba(179, 181, 188, 1);
     border: none;
+    font-family: 'Source Serif Pro', serif;
 }
 
-.crazy:hover {
+/*Other Details*/
+textarea::grammar-error {
+    text-decoration: wavy red;
+    color: red;
+}
+
+textarea::spelling-error {
+    text-decoration: wavy red;
+}
+
+.forAll:hover {
     /*um hover colorido dá sempre jeito!*/
     background-color: lightblue;
 }
@@ -124,4 +127,13 @@ img {
 
 #csstable {
     border: #3c5990;
+}
+
+.tableHeader {
+    color: rgb(235, 152, 78);
+    background-color: rgb(250, 229, 211);
+}
+
+#tableinfo{
+    border-color: rgb(29, 131, 72) ;
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Tumblr Vibes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header {
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            grid-area: menu;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: right;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            display: grid;
+            height: 100vh;
+            gap: 5px;
+            padding: 5px;
+            background-color: vhite;
+            grid-template-areas:
+                "header header  header"
+                "menu   main    right"
+                "menu  footer   right";
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .grid-container>* {
+            background-color: white;
+            opacity: 1;
+            padding: 10px;
+        }
+
+        footer {
+            color: white;
+        }
+
+
+        .navbar a {
+            background-color: rgb(128, 125, 125);
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            /*Display inline-block permite que quando a pagina é minimizada continue tudo alinhado 
+    e nao ficarem as coisas em cima das outras*/
+            display: grid;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+
+        .navbar a:hover {
+            background-color: rgba(235, 235, 235, 1);
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: rgba(207, 207, 207, 1);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header style="background-image: url(https://source.unsplash.com/wESKMSgZJDo); background-size: contain;">
+            <h1>Grid On 1</h1>
+        </header>
+        <nav style="background-color:rgb(128, 125, 125);">
+            <div class="navbar">
+                <a href="index.html">Flex</a>
+                <b><a href="page1.html" class="active">Grid 1</a></b>
+                <a href="page2.html">Grid 2</a>
+                <a href="page3.html">Grid 3</a>
+                <a href="page4.html">Grid 4</a>
+                <a href="page5.html">Grid 5</a>
+                <a href="page6.html">Grid 6</a></b>
+            </div>
+        </nav>
+
+        <main style="background-image: url(https://source.unsplash.com/ASKeuOZqhYU); background-size: cover;"></main>
+        <aside style=" display: flex; background-color: #a99a7c; color: whitesmoke; justify-content: center; align-items: center;">
+            <p>
+                How do I love thee? Let me count the ways.  <br>
+                I love thee to the depth and breadth and height<br>
+                My soul can reach, when feeling out of sight<br>
+                For the ends of Being and ideal Grace.<br>
+                I love thee to the level of everyday's<br>
+                Most quiet need, by sun and candlelight.<br>
+                I love thee freely, as men strive for Right;<br>
+                I love thee purely, as they turn from Praise.<br>
+                I love thee with the passion put to use<br>
+                In my old griefs, and with my childhood's faith.<br>
+                I love thee with a love I seemed to lose<br>
+                With my lost saints, - I love thee with the breath,<br>
+                Smiles, tears, of all my life! - and, if God choose,<br>
+                I shall but love thee better after death.<br>
+            </p>
+        </aside>
+        <footer style="background-image: url(https://source.unsplash.com/thU8S0soNnQ); background-size:cover"><p>Joana Okica - a22102756 - ULHT</p></footer>
+    </div>
+</body>
+
+</html>

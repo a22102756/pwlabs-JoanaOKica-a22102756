@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Tumblr Vibes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: menu;
+        }
+
+        .navbar a {
+            background-color: rgb(128, 125, 125);
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            /*Display inline-block permite que quando a pagina é minimizada continue tudo alinhado 
+    e nao ficarem as coisas em cima das outras*/
+            display: grid;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+
+        .navbar a:hover {
+            background-color: rgba(235, 235, 235, 1);
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: rgba(207, 207, 207, 1);
+            color: black;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: right;
+            background-color: black;
+        }
+
+        aside img {
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            grid-area: footer;
+            position: sticky;
+            bottom: 0px;
+        }
+
+        .header2 {
+            grid-area: header2;
+        }
+
+        .grid-container {
+            display: grid;
+            height: 100vh;
+            gap: 5px;
+            padding: 5px;
+            grid-template-areas:
+                "header header header"
+                "menu   main    right"
+                "footer footer footer";
+
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: 50px 1fr;
+        }
+
+        .grid-container>* {
+            background-color: white;
+            opacity: 1;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header style="background-color: #333; color: white;">
+            <h1>Grid On 6</h1>
+        </header>
+        <nav style="background-color:rgb(128, 125, 125);">
+            <div class="navbar">
+                <a href="index.html">Flex</a>
+                <a href="page1.html">Grid 1</a>
+                <a href="page2.html">Grid 2</a>
+                <a href="page3.html">Grid 3</a>
+                <a href="page4.html">Grid 4</a>
+                <a href="page5.html">Grid 5</a>
+                <b><a href="page6.html" class="active">Grid 6</a></b>
+            </div>
+        </nav>
+        <main style="background-image: url(https://source.unsplash.com/ASKeuOZqhYU); background-size: contain;"></main>
+        <aside style="background-image: url(https://source.unsplash.com/wESKMSgZJDo); background-size: cover;"></aside>
+        <footer style="background-color: #333; color: white;">
+            <p>Joana Okica - a22102756 - ULHT</p>
+        </footer>
+    </div>
+</body>
+
+</html>

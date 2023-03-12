@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Tumblr Vibes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'EB Garamond', serif;
+            margin: 0;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: menu;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        aside {
+            grid-area: right;
+        }
+
+        footer {
+            grid-area: footer;
+            bottom: 0px;
+        }
+
+        .header2 {
+            grid-area: header2;
+        }
+
+        .grid-container {
+            display: grid;
+            height: 100vh;
+            gap: 5px;
+            padding: 5px;
+            grid-template-areas:
+                "header header  header"
+                "main  main    main"
+                "menu  menu  right"
+                "footer footer footer";
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-template-rows: 50px 1fr 1fr 50px;
+        }
+
+        .grid-container>* {
+            background-color: white;
+            opacity: 1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+            position: sticky;
+            bottom: 0px;
+            color: white;
+        }
+
+        .navbar a {
+            background-color: rgb(128, 125, 125);
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            /*Display inline-block permite que quando a pagina é minimizada continue tudo alinhado 
+    e nao ficarem as coisas em cima das outras*/
+            display: grid;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(235, 235, 235, 1);
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: rgba(207, 207, 207, 1);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header style="background-color:  #333;; color: white;">
+            <h1>Grey On 5</h1>
+        </header>
+        <nav style="background-color:rgb(128, 125, 125);">
+            
+            <div class="navbar">
+                <a href="index.html">Flex</a>
+                <a href="page1.html">Grid 1</a>
+                <a href="page2.html">Grid 2</a>
+                <a href="page3.html">Grid 3</a>
+                <a href="page4.html">Grid 4</a>
+                <b><a href="page5.html" class="active">Grid 5</a></b>
+                <a href="page6.html" >Grid 6</a>
+            </div>
+        </nav>
+        <main style="background-image: url(https://source.unsplash.com/ASKeuOZqhYU); background-size: contain;"></main>
+        <aside style="background-image: url(https://source.unsplash.com/wESKMSgZJDo);  background-size: cover;"></aside>
+        <footer style="background-color: #333;"><p>Joana Okica - a22102756 - ULHT</p></footer>
+    </div>
+
+</body>
+
+</html>

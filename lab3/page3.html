@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <title>Tumblr Vibes</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Joana Okica">
+  <meta name="description" content="Website sobre Paris">
+  <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 1fr auto;
+      grid-gap: 10px;
+      height: 100vh;
+      
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      grid-column: 1 / -1;
+    }
+
+    .menu,
+    .main,
+    .aside {
+      padding: 10px;
+    }
+
+    .menu {
+      background-color: #f1f1f1;
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    .main {
+      background-image: url(https://source.unsplash.com/ASKeuOZqhYU); 
+      background-size: cover;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    .aside {
+      background-image: url(https://source.unsplash.com/wESKMSgZJDo); 
+      background-size: cover;
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+
+    main,
+    aside {
+      padding: 10px;
+    }
+
+    footer {
+      text-align: center;
+      position: sticky;
+      bottom: 0px;
+      background-color: #333;
+      color: white
+    }
+
+    .navbar a {
+      background-color: rgb(128, 125, 125);
+      color: #f2f2f2;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      /*Display inline-block permite que quando a pagina é minimizada continue tudo alinhado 
+    e nao ficarem as coisas em cima das outras*/
+      display: grid;
+      justify-content: center;
+      overflow: hidden;
+
+    }
+
+    .navbar a:hover {
+      background-color: rgba(235, 235, 235, 1);
+      color: black;
+    }
+
+    .navbar a.active {
+      background-color: rgba(207, 207, 207, 1);
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Grid On 3</h1>
+  </header>
+  <div class="grid-container">
+    <div class="menu">
+      <nav style="background-color:rgb(128, 125, 125); display: block; align-items: center; justify-content: center;">
+        <div class="navbar">
+          <a href="index.html">Flex</a>
+          <a href="page1.html">Grid 1</a>
+          <a href="page2.html">Grid 2</a>
+          <b><a href="page3.html" class="active">Grid 3</a></b>
+          <a href="page4.html">Grid 4</a>
+          <a href="page5.html">Grid 5</a>
+          <a href="page6.html" >Grid 6</a>
+        </div>
+      </nav>
+    </div>
+    <div class="main">
+      <main style="background-color: #fff;">
+        <h3>Eleanor Roosevelt</h3>
+        <p>"A woman is like a tea bag - you can't tell how strong she is until you put her in hot water."</p>
+      </main>
+    </div>
+    <div class="aside">
+      <aside style="background-color: #f1f1f1;">
+        <h3>Audre Lorde</h3>
+        <p>"I am not free while any woman is unfree, even when her shackles are very different from my own."</p>
+      </aside>
+    </div>
+  </div>
+  <footer>
+    <p>Joana Okica - a22102756 - ULHT</p>
+  </footer>
+</body>
+
+</html>
