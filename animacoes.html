@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Tumblr Vibes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link rel="icon" type="image/png" href="images/explorar.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: burlywood;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main {
+            flex-wrap: wrap;
+            display: flex;
+            gap: 8em;
+            margin-top: 11em;
+            flex: 2 3;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+        }
+
+        /*navbar related*/
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            max-width: 1200px;
+            margin: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 3.5em;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        .navbar ul li a.active:before {
+            position: absolute;
+            content: "";
+            width: 35%;
+            height: 1px;
+            border-bottom: 2px solid black;
+            bottom: -6px;
+        }
+
+        .navbar ul li a:before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 1px;
+            border-bottom: 2px solid rgb(152, 152, 152);
+            bottom: -6px;
+            transition: width .3s;
+        }
+
+        .logo {
+            text-align: center;
+            border: 2px solid black;
+            display: inline-block;
+            /* to make the div size adjust to its contents */
+            padding: 3px 1px 3px 3px;
+            /* optional padding around the content */
+            margin: 36px 50px;
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar .toggle_btn {
+            color: black;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        /*DD*/
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 60px;
+            width: 300px;
+            height: 0;
+            background-color: #537d90;
+            ;
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*RESPONSIVE DESIGN*/
+        @media(max-width:992px) {
+
+            .navbar .links,
+            .navbar .action_btn {
+                margin-right: 1em;
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                margin-right: 1em;
+                display: block;
+            }
+
+            .logo {
+                /*quando a pagina é minimzada vais precisar deste espaço entre o logo e a estrutura itself*/
+                margin: 10px;
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+        }
+
+        @media(max-width:576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: unset;
+            }
+        }
+
+        .text-box {
+            color: white;
+            position: absolute;
+            bottom: 8%;
+            margin: 10px;
+        }
+
+        .text-box p {
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .text-box h1 {
+            font-size: 190px;
+            line-height: 160px;
+            margin-left: -10px;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            background: url(images/back.png);
+            /*-webkit-background-clip: text;*/
+            background-position: 0 0;
+            animation: back 20s linear infinite;
+            margin: 10px;
+
+        }
+
+        @keyframes back {
+            100% {
+                background-position: 2000px 0;
+            }
+        }
+
+        .text-box h3 {
+            font-size: 40px;
+            font-weight: 500;
+            margin: 10px;
+        }
+
+        /*second part*/
+        .left-col {
+            width: 45%;
+            margin: 70px;
+        }
+
+        .right-col {
+            flex-grow: 1;
+        }
+
+        .right-col {
+            display: grid;
+            gap: 2.9em;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: 200px 100px;
+            grid-template-areas:
+                "left right"
+                "left bottom";
+        }
+
+        .card {
+            width: 110%;
+            border-radius: 1.9em;
+            padding: 1.6em;
+            background-size: 100%;
+            display: flex;
+            align-items: end;
+            transition: background-size .3s;
+        }
+
+        .card1 {
+            grid-area: left;
+            background-image: url(https://source.unsplash.com/otLqpb9LK70);
+            position: relative;
+        }
+
+        .card2 {
+            grid-area: right;
+            background-image: url(https://source.unsplash.com/jsgJtBOR6jY);
+        }
+
+        .card3 {
+            grid-area: bottom;
+            background-image: url(https://source.unsplash.com/Gg5-K-mJwuQ);
+
+        }
+
+        .card:hover {
+            background-size: 160%;
+        }
+
+        .card:hover .card-details {
+            transform: translateY(-20px);
+        }
+
+        .transitionWork {
+            width: 100px;
+            height: 100px;
+            background: #8b5742;
+            transition: width 2s;
+        }
+
+        .transitionWork:hover {
+            width: 150px;
+        }
+
+        .conti {
+            display: grid;
+            grid-template-columns: 80px 80px 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="site-header" style="display: flex; justify-content: space-between;">
+            <div class="logo"><a href="https://www.linkedin.com/in/joana-okica/">Oki-ca's</a></div>
+            <div class="navbar" style="z-index: 3;">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../lab3/index.html">Lab3</a></li>
+                    <li><a href="../lab2/index.html">Lab2</a></li>
+                    <li><a href="paralax.html">Paralax</a></li>
+                    <li><a href="imagens.html">Images</a></li>
+                    <li><a href="animacoes.html" class="active">Animações</a></li>
+                    <li><a href="videoPage.html">Video</a></li>
+                </ul>
+
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="hero">Home</a></li>
+                <li><a href="../lab3/index.html">Lab3</a></li>
+                <li><a href="parallax">Paralax</a></li>
+                <li><a href="images">Images</a></li>
+                <li><a href="animacoes" class="active">Animações</a></li>
+                <li><a href="videoPage.html">Video</a></li>
+            </div>
+        </header>
+
+        <main>
+            <div class="transitionWork"></div>
+            <div class="left-col">
+                <div class="text-box">
+                    <p>Welcome</p>
+                    <h1>FOOD</h1>
+                    <h3>WHY SO YOOMY</h3>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <div class="card card1"></div>
+                <div class="card card2"></div>
+                <div class="card card3"></div>
+            </div>
+
+            <div class="conti">
+                <img src="images/svg (1).svg" alt="SVG coração" style="padding: 0%;">
+                <img src="images/svg.svg" alt="SVG estrela" style="padding: 0%;">
+                <img src="images/svg (2).svg" alt="SVG golfinho" style="padding: 0%;">
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>

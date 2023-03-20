@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Main You</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Livros, Paris, Solo travel, Begginer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background-image: url(images/background.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        main {
+            display: flex;
+            gap: 8em;
+            margin-top: 7em;
+        }
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-weight: normal;
+            font-size: 5.2rem;
+            margin: 0;
+        }
+
+        /*navbar related*/
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            max-width: 1200px;
+            margin: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 3.5em;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        .navbar ul li a.active:before {
+            position: absolute;
+            content: "";
+            width: 35%;
+            height: 1px;
+            border-bottom: 2px solid black;
+            bottom: -6px;
+        }
+
+        .navbar ul li a:before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 1px;
+            border-bottom: 2px solid rgb(152, 152, 152);
+            bottom: -6px;
+            transition: width .3s;
+        }
+
+        .logo {
+            text-align: center;
+            border: 2px solid black;
+            display: inline-block;
+            /* to make the div size adjust to its contents */
+            padding: 3px 1px 3px 3px;
+            /* optional padding around the content */
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar .toggle_btn {
+            color: black;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        /*DD*/
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 60px;
+            width: 300px;
+            height: 0;
+            background-color: #537d90;
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*RESPONSIVE DESIGN*/
+        @media(max-width:992px) {
+
+            .navbar .links,
+            .navbar .action_btn  {
+                margin-right: 1em;
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                margin-right: 1em;
+                display: block;
+            }
+
+            .logo { /*quando a pagina é minimzada vais precisar deste espaço entre o logo e a estrutura itself*/
+                margin: 10px; 
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+        }
+
+        @media(max-width:576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: unset;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header style="display: flex; justify-content: space-between; z-index: 3;">
+            <div class="logo"><a href="https://www.linkedin.com/in/joana-okica/" style="color: black;">Oki-ca's</a></div>
+            <div class="navbar">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../lab3/index.html">Lab3</a></li>
+                    <li><a href="../lab2/index.html">Lab2</a></li>
+                    <li><a href="paralax.html">Paralax</a></li>
+                    <li><a href="imagens.html" class="active">Images</a></li>
+                    <li><a href="animacoes.html">Animações</a></li>
+                    <li><a href="videoPage.html">Video</a></li>
+                </ul>
+
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="hero" class="active">Home</a></li>
+                <li><a href="../lab3/index.html">Lab3</a></li>
+                <li><a href="parallax">Paralax</a></li>
+                <li><a href="images">Images</a></li>
+                <li><a href="animacoes">Animações</a></li>
+            </div>
+        </header>
+
+        <main>
+            <!-- Photo Grid -->
+            <div class="row">
+                <div class="column">
+                    <img src="https://source.unsplash.com/2mKYEVGA4jE" style="width:100%">
+                    <img src="https://source.unsplash.com/Rr3B0LH7W3k" style="width:100%">
+                    <img src="https://source.unsplash.com/M0AWNxnLaMw" style="width:100%">
+                    <img src="https://source.unsplash.com/2zDw14yCYqk" style="width:100%">
+                    <img src="https://source.unsplash.com/6R3dGQJ3qOI" style="width:100%">
+                    <img src="https://source.unsplash.com/qQWV91TTBrE" style="width:100%">
+                    <img src="https://source.unsplash.com/fG1fdervp1E" style="width:100%">
+                    <img src="https://source.unsplash.com/ZrPIXlB-BQc" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://source.unsplash.com/qD9xzm7yK9U" style="width:100%">
+                    <img src="https://source.unsplash.com/rotFzR9lX0E" style="width:100%">
+                    <img src="https://source.unsplash.com/MykFFC5zolE" style="width:100%">
+                    <img src="https://source.unsplash.com/DwpmtAo01fY" style="width:100%">
+                    <img src="https://source.unsplash.com/OrKgC0M8Lj8" style="width:100%">
+                    <img src="https://source.unsplash.com/iGDg_f_mlWo" style="width:100%">
+                    <img src="https://source.unsplash.com/ZrPIXlB-BQc" style="width:100%">
+                    <img src="https://source.unsplash.com/dnL6ZIpht2s" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://source.unsplash.com/qfdBPFMSVPM" style="width:100%">
+                    <img src="https://source.unsplash.com/UV81E0oXXWQ" style="width:100%">
+                    <img src="https://source.unsplash.com/rX12B5uX7QM" style="width:100%">
+                    <img src="https://source.unsplash.com/gy_DN08336U" style="width:100%">
+                    <img src="https://source.unsplash.com/4xyZcbG31sg" style="width:100%">
+                    <img src="https://source.unsplash.com/gm3M-CsuynI" style="width:100%">
+                    <img src="https://source.unsplash.com/rRDHlkSyoxY" style="width:100%">
+                    <img src="https://source.unsplash.com/USXfF_ONUGo" style="width:100%">
+                </div>
+
+                <div class="column">
+                    <img src="https://source.unsplash.com/aAxn9pYE8L0" style="width:100%">
+                    <img src="https://source.unsplash.com/RFDP7_80v5A" style="width:100%">
+                    <img src="https://source.unsplash.com/mk7D-4UCfmg" style="width:100%">
+                    <img src="https://source.unsplash.com/IhqDpFz7I8Q" style="width:100%">
+                    <img src="https://source.unsplash.com/aX_ljOOyWJY" style="width:100%">
+                    <img src="https://source.unsplash.com/kfR-bCXblkw" style="width:100%">
+                    <img src="https://source.unsplash.com/hm7oxhDcp9U" style="width:100%">
+                    <img src="https://source.unsplash.com/N4QTBfNQ8Nk" style="width:100%">
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+</body>
+
+</html>

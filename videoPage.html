@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Main You</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="keywords" content="Livros, Paris, Solo travel, Begginer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-weight: normal;
+            font-size: 5.2rem;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /*navbar related*/
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            max-width: 1200px;
+            margin: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 3.5em;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        .navbar ul li a.active:before {
+            position: absolute;
+            content: "";
+            width: 35%;
+            height: 1px;
+            border-bottom: 2px solid black;
+            bottom: -6px;
+        }
+
+        .navbar ul li a:before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 1px;
+            border-bottom: 2px solid rgb(152, 152, 152);
+            bottom: -6px;
+            transition: width .3s;
+        }
+
+        .logo {
+            text-align: center;
+            border: 2px solid black;
+            display: inline-block;
+            /* to make the div size adjust to its contents */
+            padding: 3px 1px 3px 3px;
+            /* optional padding around the content */
+            margin: 36px 50px;
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar .toggle_btn {
+            color: black;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        /*DD*/
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 60px;
+            width: 300px;
+            height: 0;
+            background-color: #537d90;
+            ;
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*RESPONSIVE DESIGN*/
+        @media(max-width:992px) {
+
+            .navbar .links,
+            .navbar .action_btn {
+                margin-right: 1em;
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                margin-right: 1em;
+                display: block;
+            }
+
+            .logo {
+                /*quando a pagina é minimzada vais precisar deste espaço entre o logo e a estrutura itself*/
+                margin: 10px;
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+        }
+
+        @media(max-width:576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: unset;
+            }
+        }
+
+
+        #myVideo {
+            height: 100%;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: whitesmoke;
+            padding: 20px;
+        }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 5px 5px 5px 5 px;
+            border: none;
+            background: #537d90;
+            color: #fff;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header style="display: flex; justify-content: space-between; z-index: 3;">
+            <div class="logo"><a href="https://www.linkedin.com/in/joana-okica/" style="color: black;">Oki-ca's</a>
+            </div>
+            <div class="navbar">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../lab3/index.html">Lab3</a></li>
+                    <li><a href="../lab2/index.html">Lab2</a></li>
+                    <li><a href="paralax.html">Paralax</a></li>
+                    <li><a href="imagens.html" >Images</a></li>
+                    <li><a href="animacoes.html">Animações</a></li>
+                    <li><a href="videoPage.html"class="active">Video</a></li>
+                </ul>
+
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="hero" class="active">Home</a></li>
+                <li><a href="../lab3/index.html">Lab3</a></li>
+                <li><a href="parallax">Paralax</a></li>
+                <li><a href="images">Images</a></li>
+                <li><a href="animacoes">Animações</a></li>
+            </div>
+        </header>
+        <main>
+            <video autoplay muted loop id="myVideo">
+                <source src="images/y2mate.com - Brits try viral SEXY cheeseburger in Paris_1080p.mp4" type="video/mp4">
+            </video>
+
+            <div class="content">
+                <h1>Jolly by Josh and Ollie</h1>
+                <p style="font-size: medium; margin: 0px;">Jolly by Josh and Ollie is a popular YouTube channel featuring two British
+                    friends who live in South
+                    Korea
+                    and share their experiences about Korean culture, food, and language. They have gained a significant
+                    following due to their humorous and relatable content, as well as their genuine curiosity and
+                    respect
+                    for
+                    the culture they are immersed in. Their videos are well-produced and entertaining, and they often
+                    collaborate with other YouTubers and Korean celebrities. Overall, Jolly by Josh and Ollie offers a
+                    unique
+                    and enjoyable perspective on life in South Korea that appeals to a wide audience.</p> <br>
+                <button id="myBtn" onclick="myFunction()">Pause</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+</body>
+
+</html>
