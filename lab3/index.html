@@ -2,54 +2,72 @@
 <html lang="pt">
 
 <head>
-    <title>🦄 Tumblr Vibes</title>
+    <title>Tumblr Vibes</title>
     <meta charset="utf-8">
     <meta name="author" content="Joana Okica">
     <meta name="description" content="Website sobre Paris">
     <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/png" href="images/explorar.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header id="menu">
-        <div>
-            <h1>See The World</h1>
+        <div class="navbar">
+            <div><h1>See The World</h1></div>
+            <ul class="links">
+                <li>
+                    <section class="dropD">
+                        <a href="">🕷️ Grids</a>
+                        <span class="dropC">
+                            <a href="page1.html">Grid 1</a>
+                            <a href="page2.html">Grid 2</a>
+                            <a href="page3.html">Grid 3</a>
+                            <a href="page4.html">Grid 4</a>
+                            <a href="page5.html">Grid 5</a>
+                            <a href="page6.html">Grid 6</a>
+                        </span>
+                    </section>
+                </li>
+                <li><a href="#home" class="active">👇🏿 Home</a></li>
+                <li><a href="#imagem">🖼️ Imagem</a></li>
+                <li><a href="#libraries">🏠 Libraries</a></li>
+                <li><a href="#livros">📚 Books</a></li>
+                <li><a href="../index.html">👩🏿‍🔬 Lab2</a></li>
+                <li><a href="lab4/index.html" id="styleButton">👩🏿‍🔬 Lab4</a></li>
+            </ul>
+
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
 
-        
-            <nav style="display: flex;">
-                <section class="dropD">
-                    <a href="">🕷️ Grids</a>
-                    <span class="dropC" >
-                        <a href="page1.html">Grid 1</a>
-                        <a href="page2.html">Grid 2</a>
-                        <a href="page3.html">Grid 3</a>
-                        <a href="page4.html">Grid 4</a>
-                        <a href="page5.html">Grid 5</a>
-                        <a href="page6.html">Grid 6</a>
-                    </span>
-                </section>
-                <a href="#home" class="active">👇🏿 Home</a>
-                <a href="#imagem">🖼️ Imagem</a>
-                <a href="#libraries">🏠 Libraries</a>
-                <a href="#livros">📚 Books</a>
-                <a href="../index.html">👩🏿‍🔬 Lab2</a>
-            </nav>
-         
+        <div class="dropdown_menu">
+            <li><a href="#home" class="active">👇🏿 Home</a></li>
+            <li><a href="#imagem">🖼️ Imagem</a></li>
+            <li><a href="#libraries">🏠 Libraries</a></li>
+            <li><a href="#livros">📚 Books</a></li>
+            <li><a href="../index.html">👩🏿‍🔬 Lab2</a></li>
+            <li><a href="page1.html">🕷️ Grids</a></li>
+        </div>
     </header>
 
     <main>
-        
         <div class="back1" id="home" style="background-color: #F8F8FF;">
-                <img src="https://static2.tripoto.com/media/transfer/img/77414/TripDocument/1521629733_04.gif" alt="gif" class="imagemGif">
-                <p id="tituloPrincipal" style="color: whitesmoke">Solo Trip🤸🏿‍♀️</p>
+            <img src="https://static2.tripoto.com/media/transfer/img/77414/TripDocument/1521629733_04.gif" alt="gif"
+                class="imagemGif">
+            <p id="tituloPrincipal" style="color: whitesmoke">Solo Trip🤸🏿‍♀️</p>
         </div>
         <hr>
-           
-        <div class = "imagemPlane" id="imagem">
-            <img src=" https://source.unsplash.com/uu0cOMPdM2g" alt="Paris" >   
-            <p id = "Paragrafo">The World Through someone's eyes</p>         
+
+        <div class="imagemPlane" id="imagem">
+            <img src="https://source.unsplash.com/uu0cOMPdM2g" alt="Paris">
+            <p id="Paragrafo">The World Through someone's eyes</p>
         </div>
         <hr>
 
@@ -58,47 +76,80 @@
         <div class="capitais" id="libraries">
             <div>
                 <div><img src="images/milao.avif" alt="Milão" class="blockImages"></div>
-                <div><a href="https://www.hisour.com/pt/ambrosian-library-milan-italy-49453/" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Milão</p></a></div>
+                <div><a href="https://www.hisour.com/pt/ambrosian-library-milan-italy-49453/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Milão</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/bruxelas.avif" alt="Bruxelas" class="blockImages"></div>
-                <div><a href="https://percursosliterariosblog.com/2018/05/17/tropismes-librairie-bruxelas-belgica/" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Bruxelas</p></a></div>
+                <div><a href="https://percursosliterariosblog.com/2018/05/17/tropismes-librairie-bruxelas-belgica/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Bruxelas</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/londres.avif" alt="Londres" class="blockImages"></div>
-                <div><a href="https://asdistancias.com/2018/02/14/as-bibliotecas-mais-bonitas-do-mundo-british-library-em-londres/" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Londres</p></a></div>
+                <div><a href="https://asdistancias.com/2018/02/14/as-bibliotecas-mais-bonitas-do-mundo-british-library-em-londres/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Londres</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/roma.avif" alt="Roma" class="blockImages"></div>
-                <div><a href="https://www.histouring.com/en/historical-places/biblioteca-angelica/" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Roma</p></a></div>
+                <div><a href="https://www.histouring.com/en/historical-places/biblioteca-angelica/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Roma</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/lisboa.avif" alt="Lisboa" class="blockImages"></div>
-                <div><a href="https://lisboasecreta.co/as-bibliotecas-mais-bonitas-de-lisboa/" style="outline: none; text-decoration: none; color: black; font-size: 17px; "><p class="blockParagrafo">Lisboa</p></a></div>
+                <div><a href="https://lisboasecreta.co/as-bibliotecas-mais-bonitas-de-lisboa/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px; ">
+                        <p class="blockParagrafo">Lisboa</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/praga.avif" alt="Praga" class="blockImages"></div>
-                <div><a href="https://www.itinari.com/pt/world-s-most-beautiful-library-in-prague-satp" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Praga</p></a></div>
+                <div><a href="https://www.itinari.com/pt/world-s-most-beautiful-library-in-prague-satp"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Praga</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/budapeste.avif" alt="Budapeste" class="blockImages"></div>
-                <div><a href="https://www.tripadvisor.pt/Attraction_Review-g274887-d7923506-Reviews-Metropolitan_Ervin_Szabo_Library-Budapest_Central_Hungary.html" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Budapeste</p></a></div>
+                <div><a href="https://www.tripadvisor.pt/Attraction_Review-g274887-d7923506-Reviews-Metropolitan_Ervin_Szabo_Library-Budapest_Central_Hungary.html"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Budapeste</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/paris.avif" alt="Paris" class="blockImages"></div>
-                <div><a href="https://www.parciparla.com.br/as-lindas-bibliotecas-de-paris/" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Paris</p></a></div>
+                <div><a href="https://www.parciparla.com.br/as-lindas-bibliotecas-de-paris/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Paris</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/varsovia.avif" alt="Varsóvia" class="blockImages"></div>
-                <div><a href="https://pt.wikipedia.org/wiki/Biblioteca_Nacional_da_Pol%C3%B3nia" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Varsóvia</p></a></div>
+                <div><a href="https://pt.wikipedia.org/wiki/Biblioteca_Nacional_da_Pol%C3%B3nia"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Varsóvia</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/reykiavik.avif" alt="Reykiavik" class="blockImages"></div>
-                <div><a href="https://365diasnomundo.com/2019/12/04/reykjavik/" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p class="blockParagrafo">Reykiavik</p></a></div>
+                <div><a href="https://365diasnomundo.com/2019/12/04/reykjavik/"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p class="blockParagrafo">Reykiavik</p>
+                    </a></div>
             </div>
             <div>
                 <div><img src="images/viena.avif" alt=" Viena" class="blockImages"></div>
-                <div><a href="https://www.onb.ac.at/en/museums/state-hall" style="outline: none; text-decoration: none; color: black; font-size: 17px;"><p>Viena</p class="blockParagrafo"></a></div>
+                <div><a href="https://www.onb.ac.at/en/museums/state-hall"
+                        style="outline: none; text-decoration: none; color: black; font-size: 17px;">
+                        <p>Viena</p class="blockParagrafo">
+                    </a></div>
             </div>
         </div>
         <hr>
@@ -109,11 +160,17 @@
                     <img src="images/omelas.png" alt="circle1">
                     <span class="tooltiptext">
                         <figcaption>
-                           <i class="material-icons">&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0; </i></figcaption>
+                            <i class="material-icons">&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0; </i>
+                        </figcaption>
                     </span>
                 </div>
-                <div><p><strong>The Ones Who Walk Away from Omelas</strong>  é uma história curta provocadora escrita por Ursula K. Le Guin que desafia a ideia de utopia. Na história, as pessoas de Omelas vivem numa sociedade perfeita, mas a sua felicidade depende do sofrimento de uma criança. 
-                    A história levanta questões sobre a moralidade de sacrificar um indivíduo pelo bem maior e se a verdadeira felicidade pode ser alcançada através da opressão dos outros.</p></div>
+                <div>
+                    <p><strong>The Ones Who Walk Away from Omelas</strong> é uma história curta provocadora escrita por
+                        Ursula K. Le Guin que desafia a ideia de utopia. Na história, as pessoas de Omelas vivem numa
+                        sociedade perfeita, mas a sua felicidade depende do sofrimento de uma criança.
+                        A história levanta questões sobre a moralidade de sacrificar um indivíduo pelo bem maior e se a
+                        verdadeira felicidade pode ser alcançada através da opressão dos outros.</p>
+                </div>
             </div>
             <div class="image2">
                 <div class="circle">
@@ -122,8 +179,14 @@
                         <figcaption><i class="material-icons">&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0; </i></figcaption>
                     </span>
                 </div>
-                <div><p><strong>1984</strong> é um livro distópico escrito por George Orwell e publicado em 1949. A história se passa em um futuro onde o governo controla tudo e a privacidade é inexistente. 
-                    É um retrato sombrio e perturbador de um mundo totalitário e opressor, onde a liberdade é uma ilusão e a verdade é manipulada. É considerado um clássico da literatura e uma leitura obrigatória para quem se interessa por temas como controle governamental e vigilância.</p></div>
+                <div>
+                    <p><strong>1984</strong> é um livro distópico escrito por George Orwell e publicado em 1949. A
+                        história se passa em um futuro onde o governo controla tudo e a privacidade é inexistente.
+                        É um retrato sombrio e perturbador de um mundo totalitário e opressor, onde a liberdade é uma
+                        ilusão e a verdade é manipulada. É considerado um clássico da literatura e uma leitura
+                        obrigatória para quem se interessa por temas como controle governamental e vigilância.
+                    </p>
+                </div>
             </div>
             <div class="image3">
                 <div class="circle">
@@ -132,18 +195,43 @@
                         <figcaption><i class="material-icons">&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0;&#xe8d0; </i></figcaption>
                     </span>
                 </div>
-                <div><p><strong>Lua de Joana</strong> é um romance da escritora Maria Teresa Maia Gonzalez que conta a história de Joana, uma adolescente que descobre segredos da sua família após a morte da sua irmã mais velha. 
-                    Com a ajuda do seu avô, Joana mergulha numa jornada emocional de autodescoberta e aprende importantes lições sobre amor, perdão e coragem. A obra é um comovente retrato da adolescência e uma reflexão sobre a vida e a morte.</p></div>
+                <div>
+                    <p><strong>Lua de Joana</strong> é um romance da escritora Maria Teresa Maia Gonzalez que conta a
+                        história de Joana, uma adolescente que descobre segredos da sua família após a morte da sua irmã
+                        mais velha.
+                        Com a ajuda do seu avô, Joana mergulha numa jornada emocional de autodescoberta e aprende
+                        importantes lições sobre amor, perdão e coragem. A obra é um comovente retrato da adolescência e
+                        uma reflexão sobre a vida e a morte.
+                    </p>
+                </div>
             </div>
         </div>
-    </main>
 
+
+    </main>
     <footer>
         <p>
-        <audio controls autoplay volume="0.1">
-        <source src="sound/jap_soft.mp3" type="audio/mp3">
-        </audio> </p>
+            <audio controls autoplay volume="0.1">
+                <!--<source src="sound/jap_soft.mp3" type="audio/mp3">-->
+            </audio>
+        </p>
     </footer>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+
 </body>
 
 </html>
