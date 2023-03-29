@@ -19,11 +19,13 @@ h1 {
 }
 li {
     list-style: none;  
+   
 }
 
 a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1rem; 
+    color: aliceblue;
 }
 
 @media only screen and (max-width: 700px) {
@@ -72,9 +74,9 @@ header {
     display: none;
 }
 
-.action_btn:active {
+/*.action_btn:active {
     scale: 0.95;
-}
+}*/
 
 .back1 {
     display: flex;
@@ -224,59 +226,11 @@ audio {
 }
 
 
-.dropC a {
-    padding: 16px 30px;
-    text-decoration: none;
-    display: flex;
-    color: black;
-}
-
-.dropD .dropC {
-    visibility: hidden;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.dropD:hover .dropC {
-    visibility: visible;
-    display: block;
-}
 
 li {
     list-style: none;  
 }
 
-/*
-@media screen and (max-width:390px) {
-    .imagemGif {
-        max-width: 80%;
-        height: auto;
-    }
-
-    #tituloPrincipal {
-        display: flex;
-        margin-bottom: 2em ;
-        font-size: 20px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .back1 {
-        color: #729ff2;
-    }
-    .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 80px 400px;
-    gap: 10px;
-    padding: 10px;
-    }
-}
-
-
- 
 /*DD*/
 .dropdown_menu {
     display: none;
@@ -284,9 +238,10 @@ li {
     right: 2rem;
     top:60px;
     width: 300px;
-    height: 0;
+    height: auto;
     bottom: red;
-    background-color: beige;
+    background-color: #537d90;
+    color: whitesmoke;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -310,6 +265,32 @@ li {
     justify-content: center;
 }
 
+.dropC a {
+    padding: 16px 30px;
+    text-decoration: none;
+    display: flex;
+    color: black;
+    background-color: #748b97;
+}
+
+.dropC a:hover {
+    background-color: #D4D4D4;
+}
+
+.dropD .dropC {
+    visibility: hidden;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dropD:hover .dropC {
+    visibility: visible;
+    display: block;
+    z-index: 4;
+}
+
 @media(max-width:992px) {
     .navbar .links,
     .navbar .action_btn{
@@ -325,11 +306,6 @@ li {
     }
 }
 
-@media(max-width:576px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
-}
+
 
 

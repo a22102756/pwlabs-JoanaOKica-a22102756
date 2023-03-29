@@ -1,249 +1,140 @@
-@import url('https://fonts.cdnfonts.com/css/perpetua-titling-mt');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@200;400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    align-items: center;
-}
-
-html {
-    font-size: 62.5%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lobster&family=Source+Serif+Pro&display=swap');
 
 body {
-    width:100%;
-    background-color: black;
-    background: url(images/wallpaperflare.com_wallpaper.jpg)no-repeat;
-    background-size: cover;
-    font-family: 'Poppins';
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgba(228, 229, 231, 1);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+h3 {
+    font-family: 'Gloock', serif;
+    color: #3c5990;
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
-main {
-    display: flex;
-    gap: 8em;
-    margin-top: 7em;
+#f1 {
+    background-color: rgba(237, 240, 253, 1);
 }
 
-h1 {
-    font-family: 'Playfair Display';
-    font-weight: normal;
-    font-size: 5.2rem;
-    margin:0;
+#f2 {
+    background-color: rgba(205, 213, 249, 1);
 }
 
-/*navbar related*/
-li {
-    list-style: none;  
+footer {
+    position: sticky;
+    bottom: 0px;
+    background: rgba(179, 181, 188, 1);
 }
 
-a {
-    color: black;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    font-size: 1.6rem;
+label {
+    display: block;
+    margin-top: 1em;
 }
 
-a:hover {
-    color:grey;
+ol.myOL {
+    display: inline-block;
+    text-align: left;
 }
+
+/*Imagem principal related*/
+.tooltip {
+    /*vou deixar como relative caso no futuro tenha outros elementos nesta zona
+    assim este sempre se destaca*/
+    position: relative;
+    /*O texto apenas aparece quando o rato passa por cima da imagem*/
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 
 .navbar {
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    gap: 3.5em;
-}
-.navbar ul li a {
-    text-decoration: none;
-    color: black;
-    text-transform: uppercase;
-    position: relative;
-    font-size: 1.6rem;
-}
-
-.navbar ul li a.active:before {
-    position: absolute;
-    content: "";
-    width: 35%;
-    height: 1px;
-    border-bottom: 2px solid black;
-    bottom: -6px;
-}
-
-.navbar ul li a:before {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 1px;
-    border-bottom: 2px solid rgb(152, 152, 152);
-    bottom: -6px;
-    transition: width .3s;
-}
-
-.logo {
-        text-align: center;
-        border: 2px solid whitesmoke;
-        display: inline-block; /* to make the div size adjust to its contents */
-        padding: 3px 1px 3px 3px;; /* optional padding around the content */
-    
-}
-.navbar .logo a{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .links {
-    display: flex;
-    gap: 2rem;
-}
-
-.navbar .toggle_btn {
-    color: beige;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-/*DD*/
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top:60px;
-    width: 300px;
-    height: 0;
-    bottom: red;
-    background-color: beige;
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
+    background-color: rgba(179, 181, 188, 1);
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: 'Source Serif Pro', serif;
 }
 
-.dropdown_menu.open {
-    height: 240px;
-}
-
-.dropdown_menu li{
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown_menu .action_btn{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.left-col {    
-    width: 45%;
-}
-
-.right-col {
-    flex-grow: 1;
-}
-
-.subhead {
-    font-size: 1.8rem;
-}
-
-.news {
-    display: flex;
-    gap: 3em;
-    padding: 5em;
-    border: 1px solid black;
-    border-radius: 1.9em;
-    position: relative;
-}
-
-.cta-btns {
+/*Navigation bar related*/
+.navbar a {
+    color: #f2f2f2;
+    padding: 14px 16px;
     text-decoration: none;
-    display: flex;
-    gap: 2em;
+    font-size: 17px;
+    /*Display inline-block permite que quando a pagina é minimizada continue tudo alinhado 
+    e nao ficarem as coisas em cima das outras*/
+    display: inline-block;
 }
 
-.subscribe {
-    text-decoration: none;
-    background: #748b97;
-    font-size: 0.8rem;
+
+.navbar a:hover {
+    background-color: rgba(235, 235, 235, 1);
     color: black;
-    text-decoration: none;
-    border-radius: 1.9em;
-    padding: 0.5em 1em;
 }
 
-
-
-/*RESPONSIVE DESIGN*/
-@media(max-width:992px) {
-    .navbar .links,
-    .navbar .action_btn{
-        display: none;
-    }
-
-    .navbar .toggle_btn{
-        display: block;
-    }
-
-    .dropdown_menu {
-        display: block;
-    }
-    
-    .logo {
-        margin: 10px; 
-    }
+.navbar a.active {
+    background-color: rgba(207, 207, 207, 1);
+    color: black;
 }
 
-@media(max-width:576px) {
-    .dropdown_menu {
-        left: 2rem;
-        width: unset;
-    }
+.buttonstyle {
+    border-radius: 6px;
+    display: inline-block;
+    background-color: rgba(179, 181, 188, 1);
+    border: none;
+    font-family: 'Source Serif Pro', serif;
 }
 
-@media(max-width:992px) {
-    section{
-        padding:2rem;
-    }
-    
-    .hero {
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 4.5rem;
-    }
-
-    .hero p {
-        font-size: 1.5rem;
-    }
+/*Other Details*/
+textarea::grammar-error {
+    text-decoration: wavy red;
+    color: red;
 }
 
+textarea::spelling-error {
+    text-decoration: wavy red;
+}
+
+.forAll:hover {
+    /*um hover colorido dá sempre jeito!*/
+    background-color: lightblue;
+}
+
+.formatacao {
+    display: block;
+    text-align: unset;
+}
+
+img {
+    border: 1px solid black;
+}
+
+[target="blank_"] {
+    color: olivedrab;
+}
+
+#csstable {
+    border: #3c5990;
+}
+
+.tableHeader {
+    color: rgb(235, 152, 78);
+    background-color: rgb(250, 229, 211);
+}
+
+#tableinfo{
+    border-color: rgb(29, 131, 72) ;
+}

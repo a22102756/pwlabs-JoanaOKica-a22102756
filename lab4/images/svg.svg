@@ -1,7 +1,9 @@
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-
  <g>
   <title>Layer 1</title>
-  <path stroke-width="20" id="svg_1" d="m212.93502,252.42807l61.49697,0l19.00304,-60.3508l19.00305,60.3508l61.49696,0l-49.752,37.29842l19.00402,60.3508l-49.75202,-37.29943l-49.75201,37.29943l19.00402,-60.3508l-49.75202,-37.29842z" stroke="#000" fill="#fff"/>
+  <ellipse stroke-width="0" ry="13.5" rx="11" id="svg_4" cy="248.5" cx="384" stroke-dasharray="2,2" stroke="#000" fill="#9ACEE6"/>
+  <path stroke-dasharray="2,2" stroke-width="0" stroke="#000" id="svg_1" d="m291.54,242.34124l11.07709,0l3.42291,-11.45901l3.42291,11.45901l11.07709,0l-8.96154,7.08198l3.42308,11.45901l-8.96154,-7.08217l-8.96154,7.08217l3.42309,-11.45901l-8.96154,-7.08198z" fill="#535F75"/>
+  <path transform="rotate(-180 346 248)" stroke="#000" stroke-width="0" id="svg_2" d="m334,237l24,0l0,22l-24,0l0,-22z" stroke-dasharray="5,2,2,2,2,2" fill="#0E353B"/>
  </g>
+
 </svg>

@@ -19,7 +19,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: burlywood;
         }
 
         html {
@@ -38,6 +37,17 @@
             gap: 8em;
             margin-top: 11em;
             flex: 2 3;
+        }
+
+        body {
+            display: flex;
+            background-image: url(images/underwater.jpg);
+            background-color: #032433;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            position: fixed;
+            z-index: -1;
         }
 
         .wrapper {
@@ -137,7 +147,6 @@
             width: 300px;
             height: 0;
             background-color: #537d90;
-            ;
             backdrop-filter: blur(15px);
             border-radius: 10px;
             overflow: hidden;
@@ -159,6 +168,223 @@
             width: 100%;
             display: flex;
             justify-content: center;
+        }
+
+        .text-box {
+            color: whitesmoke;
+            position: absolute;
+        }
+
+        .text-box p {
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .text-box h1 {
+            font-size: 80px;
+            line-height: 160px;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            background: url(images/back.png);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: back 20s linear infinite;
+            /* margin: 10px;*/
+
+        }
+
+        @keyframes back {
+            100% {
+                background-position: 2000px 0;
+            }
+        }
+
+        .text-box h3 {
+            font-size: 40px;
+            font-weight: 500;
+            margin: 10px;
+        }
+
+        /*second part*/
+        .bubble {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .bubble div {
+            height: 60px;
+            width: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            animation: animate 4s linear infinite;
+        }
+
+        div .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 20%;
+            right: 20%;
+        }
+
+        .bubble div:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+
+        }
+
+        .bubble div:nth-child(2) {
+            top: 80%;
+            left: 80%;
+            animation: animate 10s linear infinite;
+        }
+
+        .bubble div:nth-child(3) {
+            top: 40%;
+            left: 40%;
+            animation: animate 5s linear infinite;
+        }
+
+        .bubble div:nth-child(4) {
+            top: 66%;
+            left: 30%;
+            animation: animate 7s linear infinite;
+        }
+
+        .bubble div:nth-child(5) {
+            top: 90%;
+            left: 10%;
+            animation: animate 9s linear infinite;
+        }
+
+        .bubble div:nth-child(6) {
+            top: 30%;
+            left: 60%;
+            animation: animate 5s linear infinite;
+        }
+
+        .bubble div:nth-child(7) {
+            top: 70%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .bubble div:nth-child(8) {
+            top: 75%;
+            left: 60%;
+            animation: animate 10s linear infinite;
+        }
+
+        .bubble div:nth-child(9) {
+            top: 50%;
+            left: 50%;
+            animation: animate 6s linear infinite;
+        }
+
+        .bubble div:nth-child(10) {
+            top: 45%;
+            left: 20%;
+            animation: animate 10s linear infinite;
+        }
+
+        .bubble div:nth-child(11) {
+            top: 10%;
+            left: 90%;
+            animation: animate 9s linear infinite;
+        }
+
+        .bubble div:nth-child(12) {
+            top: 20%;
+            left: 70%;
+            animation: animate 7s linear infinite;
+        }
+
+        .bubble div:nth-child(13) {
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .bubble div:nth-child(14) {
+            top: 60%;
+            left: 5%;
+            animation: animate 6s linear infinite;
+        }
+
+        .bubble div:nth-child(15) {
+            top: 90%;
+            left: 80%;
+            animation: animate 8s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0) translateY(0) rotate(70deg);
+            }
+
+            100% {
+                transform: scale(1) translateY(-100px) rotate(100deg);
+            }
+        }
+
+        /*Utilizaçção de seletores*/
+        .right-align {
+            text-align: right;
+            position: absolute;
+            top: 90px;
+            right: -550px;
+            margin-top: 220px;
+            margin-left: 100px;
+            z-index: 1;
+            line-height: 18px;
+        }
+
+        .right-align h2 {
+            color: whitesmoke;
+        }
+
+        .right-align:hover {
+            color: #acc8d7;
+        }
+
+        #right-align-title {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .right-align h2::first-letter {
+            font-size: 30px;
+            color: azure;
+        }
+
+        .svg {
+            text-align: right;
+            position: absolute;
+            top: 90px;
+            right: -950px;
+            margin-top: 250px;
+            margin-left: 100px;
+            z-index: -1;
+            animation: svg 5s linear 2s infinite alternate;
+        }
+
+        @keyframes svg {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 200px;
+                top: 0px;
+            }
         }
 
         /*RESPONSIVE DESIGN*/
@@ -185,120 +411,41 @@
             }
         }
 
-        @media(max-width:576px) {
+        @media(max-width:816px) {
             .dropdown_menu {
                 left: 2rem;
                 width: unset;
             }
-        }
 
-        .text-box {
-            color: white;
-            position: absolute;
-            bottom: 8%;
-            margin: 10px;
-        }
-
-        .text-box p {
-            font-size: 50px;
-            font-weight: 600;
-        }
-
-        .text-box h1 {
-            font-size: 190px;
-            line-height: 160px;
-            margin-left: -10px;
-            color: transparent;
-            -webkit-text-stroke: 1px white;
-            background: url(images/back.png);
-            /*-webkit-background-clip: text;*/
-            background-position: 0 0;
-            animation: back 20s linear infinite;
-            margin: 10px;
-
-        }
-
-        @keyframes back {
-            100% {
-                background-position: 2000px 0;
+            .text-box {
+                margin-top: 40px;
             }
-        }
 
-        .text-box h3 {
-            font-size: 40px;
-            font-weight: 500;
-            margin: 10px;
-        }
+            .text-box h1 {
+                font-size: 40px;
+            }
 
-        /*second part*/
-        .left-col {
-            width: 45%;
-            margin: 70px;
-        }
+            .right-align {
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                top: 0px;
+                right: -250px;
+                left: -100px;
+                margin-top: 470px;
+                margin-left: 100px;
+                z-index: 1;
+                color: #acc8d7;
+            }
 
-        .right-col {
-            flex-grow: 1;
-        }
+            .svg {
+                top: 0px;
+                right: -50px;
+                left: -250px;
+                margin-top: 470px;
+                margin-left: 100px;
+            }
 
-        .right-col {
-            display: grid;
-            gap: 2.9em;
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: 200px 100px;
-            grid-template-areas:
-                "left right"
-                "left bottom";
-        }
-
-        .card {
-            width: 110%;
-            border-radius: 1.9em;
-            padding: 1.6em;
-            background-size: 100%;
-            display: flex;
-            align-items: end;
-            transition: background-size .3s;
-        }
-
-        .card1 {
-            grid-area: left;
-            background-image: url(https://source.unsplash.com/otLqpb9LK70);
-            position: relative;
-        }
-
-        .card2 {
-            grid-area: right;
-            background-image: url(https://source.unsplash.com/jsgJtBOR6jY);
-        }
-
-        .card3 {
-            grid-area: bottom;
-            background-image: url(https://source.unsplash.com/Gg5-K-mJwuQ);
-
-        }
-
-        .card:hover {
-            background-size: 160%;
-        }
-
-        .card:hover .card-details {
-            transform: translateY(-20px);
-        }
-
-        .transitionWork {
-            width: 100px;
-            height: 100px;
-            background: #8b5742;
-            transition: width 2s;
-        }
-
-        .transitionWork:hover {
-            width: 150px;
-        }
-
-        .conti {
-            display: grid;
-            grid-template-columns: 80px 80px 80px;
         }
     </style>
 </head>
@@ -306,12 +453,16 @@
 <body>
     <div class="wrapper">
         <header class="site-header" style="display: flex; justify-content: space-between;">
+<<<<<<< HEAD
+            <div class="logo"><a href="index.html">Pa ris</a></div>
+=======
             <div class="logo"><a href="https://www.linkedin.com/in/joana-okica/">Oki-ca's</a></div>
+>>>>>>> parent of d27bcf4 (save point)
             <div class="navbar" style="z-index: 3;">
                 <ul class="links">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Lab2</a></li>
                     <li><a href="../lab3/index.html">Lab3</a></li>
-                    <li><a href="../lab2/index.html">Lab2</a></li>
                     <li><a href="paralax.html">Paralax</a></li>
                     <li><a href="imagens.html">Images</a></li>
                     <li><a href="animacoes.html" class="active">Animações</a></li>
@@ -330,29 +481,63 @@
                 <li><a href="images">Images</a></li>
                 <li><a href="animacoes" class="active">Animações</a></li>
                 <li><a href="videoPage.html">Video</a></li>
+<<<<<<< HEAD
+                <li><a href="../index.html">Lab2</a></li>
+                <li><a href="../lab3/index.html">Lab3</a></li>
+=======
+>>>>>>> parent of d27bcf4 (save point)
             </div>
         </header>
 
         <main>
-            <div class="transitionWork"></div>
-            <div class="left-col">
-                <div class="text-box">
-                    <p>Welcome</p>
-                    <h1>FOOD</h1>
-                    <h3>WHY SO YOOMY</h3>
+            <div>
+                <div class="text-box" style="margin-top: -90px; margin-left: 50px;">
+                    <p style="color:whitesmoke" tyle="z-index: -1">I'M</p>
+                    <h1 style="line-height: 1.5;">DREAMING</h1>
+                    <h3 style="line-height: 1.5;">and so are you</h3>
                 </div>
+                <div class="right-align">
+                    <h2 id="right-align-title">Life being lively</h2>
+                    <p style="font-size: 14px; font-family: 'Times New Roman', Times, serif; ">
+                        Drifting in a world full of possibilities,<br>
+                        My heart feels both light and heavy,<br>
+                        So many paths to take, so many doors to open,<br>
+                        Yet the thought of choice makes me frozen. <br>
+
+                        The endless choices can be overwhelming, <br>
+                        So many decisions to make, so much calculating, <br>
+                        Every move feels like a step into the unknown, <br>
+                        I'm adrift in a sea of possibilities, all alone. <br>
+
+                        But amidst the chaos and uncertainty, <br>
+                        I cling to hope and serenity, <br>
+                        For though the road may seem unclear, <br>
+                        I know that I can overcome my fear. <br>
+                    </p>
+                </div>
+                <div class="svg">
+                    <img src="images/svg.svg" alt="svg descreto">
+                </div>
+
+
             </div>
 
-            <div class="right-col">
-                <div class="card card1"></div>
-                <div class="card card2"></div>
-                <div class="card card3"></div>
-            </div>
-
-            <div class="conti">
-                <img src="images/svg (1).svg" alt="SVG coração" style="padding: 0%;">
-                <img src="images/svg.svg" alt="SVG estrela" style="padding: 0%;">
-                <img src="images/svg (2).svg" alt="SVG golfinho" style="padding: 0%;">
+            <div class="bubble">
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
+                <div><span class="dot"></span></div>
             </div>
 
         </main>

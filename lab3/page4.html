@@ -8,7 +8,7 @@
     <meta name="description" content="Website sobre Paris">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
-    <link rel="icon" type="image/png" href="images/explorar.png"/>
+    <link rel="icon" type="image/png" href="images/explorar.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
@@ -102,9 +102,14 @@
             visibility: hidden;
         }
 
-
         .tooltip:hover .tooltiptext {
             visibility: visible;
+        }
+
+        @media(max-width:576px) {
+            .navbar a{
+            padding: 14px 16px;
+            }
         }
     </style>
 </head>
@@ -114,7 +119,9 @@
         <header class="tooltip" style="display: flex; justify-content: center; align-items: center; ">
             <div>
                 <span class="tooltiptext">
-                    <b><p>é suposto haver um tal contraste que incomoda o olhar</p></b>
+                    <b>
+                        <p>é suposto haver um tal contraste que incomoda o olhar</p>
+                    </b>
                 </span>
 
                 <h1 style="color: orangered;">Dor de ser estudante</h1><br>
