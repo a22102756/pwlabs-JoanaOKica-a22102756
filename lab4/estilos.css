@@ -13,13 +13,8 @@ html {
 }
 
 body {
-<<<<<<< HEAD
-    width: 100%;
-    height: 100%;
-=======
     width:100%;
     background-color: black;
->>>>>>> parent of d27bcf4 (save point)
     background: url(images/wallpaperflare.com_wallpaper.jpg)no-repeat;
     background-size: cover;
     font-family: 'Poppins';
@@ -64,11 +59,7 @@ a {
 }
 
 a:hover {
-<<<<<<< HEAD
-    color: white;
-=======
     color:grey;
->>>>>>> parent of d27bcf4 (save point)
 }
 
 .navbar {
@@ -116,20 +107,11 @@ a:hover {
 }
 
 .logo {
-<<<<<<< HEAD
-    text-align: center;
-    border: 2px solid whitesmoke;
-    display: inline-block;
-    /* to make the div size adjust to its contents */
-    padding: 3px 1px 3px 3px;
-    /* optional padding around the content */
-=======
         text-align: center;
         border: 2px solid whitesmoke;
         display: inline-block; /* to make the div size adjust to its contents */
         padding: 3px 1px 3px 3px;; /* optional padding around the content */
     
->>>>>>> parent of d27bcf4 (save point)
 }
 .navbar .logo a{
     font-size: 1.5rem;
@@ -181,42 +163,7 @@ a:hover {
     justify-content: center;
 }
 
-<<<<<<< HEAD
-.dropC a {
-    padding: 16px 30px;
-    text-decoration: none;
-    display: flex;
-    color: black;
-    background-color: #748b97;
-}
-
-.dropC a:hover {
-    background-color: #D4D4D4;
-}
-
-.dropD .dropC {
-    visibility: hidden;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropD:hover .dropC {
-    visibility: visible;
-    display: block;
-    z-index: 4;
-}
-
-.left-col {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: auto 0; 
-    grid-template-rows: auto auto; 
-    grid-gap: 10px;
-=======
 .left-col {    
->>>>>>> parent of d27bcf4 (save point)
     width: 45%;
 }
 
@@ -283,48 +230,10 @@ a:hover {
 
 }
 
-<<<<<<< HEAD
-@media(max-width:600px) {
-    * {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    body {
-        background: url(images/wallpaperflare.com_wallpaper.jpg)no-repeat;
-        background-color:#BCBFC6;
-        background-size: cover;
-    }
-    
-=======
 @media(max-width:576px) {
->>>>>>> parent of d27bcf4 (save point)
     .dropdown_menu {
         z-index: 3;
     }
-<<<<<<< HEAD
-        
-    h1 {
-        color: white;
-        font-size: 28px;
-    }
-
-    .left-col {
-        display: grid;
-        grid-template-columns: auto; 
-        grid-template-rows: auto auto; 
-        grid-gap: 10px; 
-        width: auto;
-        padding: 30px;
-        
-    }
-
-    .subhead {
-        min-width: 200px;
-        z-index: 5;
-        font-size: 15px;
-=======
 }
 
 @media(max-width:992px) {
@@ -336,7 +245,6 @@ a:hover {
         background-position: left;
         justify-content: center;
         text-align: center;
->>>>>>> parent of d27bcf4 (save point)
     }
 
     .indexVideo { 
@@ -351,7 +259,3 @@ a:hover {
         padding: 0.2em 1em;
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of d27bcf4 (save point)
