@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Tumblr Vibes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Joana Okica">
+    <meta name="description" content="Website sobre Paris">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Comida, Paris, Solo travel, Viajar sozinho">
+    <link rel="icon" type="image/png" href="images/explorar.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/perpetua-titling-mt');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@200;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            width: 100%;
+            background-size: cover;
+            font-family: 'Poppins';
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: 0 8%;
+            position: relative;
+        }
+
+        main {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin-top: 90px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-weight: normal;
+            font-size: 5.2rem;
+            margin: 0;
+        }
+
+        /*navbar related*/
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            font-size: 1.6rem;
+        }
+
+        a:hover {
+            color: grey;
+        }
+
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            max-width: 1200px;
+            margin: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            gap: 3.5em;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        .navbar ul li a.active:before {
+            position: absolute;
+            content: "";
+            width: 35%;
+            height: 1px;
+            border-bottom: 2px solid black;
+            bottom: -6px;
+        }
+
+        .navbar ul li a:before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 1px;
+            border-bottom: 2px solid rgb(152, 152, 152);
+            bottom: -6px;
+            transition: width .3s;
+        }
+
+        .logo {
+            text-align: center;
+            border: 2px solid black;
+            display: inline-block;
+            /* to make the div size adjust to its contents */
+            padding: 3px 1px 3px 3px;
+            ;
+            /* optional padding around the content */
+
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar .toggle_btn {
+            color: black;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        /*DD*/
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 1rem;
+            width: 300px;
+            height: 0;
+            background-color: #BCBFC6;
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .site-header {
+            background-image: url(images/funditoParallax.jpg);
+            position: relative;
+            padding: 5rem;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .site-header-mask {
+            inset: 0;
+            position: absolute;
+            -webkit-mask: url(images/Exclude.png);
+            -webkit-mask-position: bottom;
+            -webkit-mask-size: cover;
+            mask: url(images/Exclude.png);
+            mask-position: bottom;
+            mask-size: cover;
+        }
+
+        .site-title {
+            color: whitesmoke;
+            text-align: center;
+            font-size: clamp(4rem, 10vw + 0.5rem, 9rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            position: fixed;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        p {
+            display: flex;
+            font-size: 13px;
+            text-align: justify;
+        }
+
+        .item3,
+        .item1,
+        .item2 {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            height: 100%;
+        }
+
+        .site-title::first-letter {
+            color: #eff2f4;
+        }
+
+
+        @media(max-width:992px) {
+
+            .navbar .links,
+            .navbar .action_btn {
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                display: block;
+            }
+
+            .logo {
+                margin: 10px;
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+        }
+
+        @media(max-width:576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: 100px;
+                left: 15rem;
+            }
+
+            .site-title {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="site-header" style="display: flex; justify-content: space-between;">
+            <div class="logo"><a href="https://www.linkedin.com/in/joana-okica/">Oki-ca's</a></div>
+            <div class="navbar" style="z-index: 3;">
+                <ul class="links">
+                    <li ><a href="index.html">Home</a></li>
+                    <li><a href="../lab3/index.html">Lab3</a></li>
+                    <li><a href="../lab2/index.html">Lab2</a></li>
+                    <li><a href="paralax.html" class="active" style="color: aliceblue;">Paralax</a></li>
+                    <li><a href="imagens.html" style="color: black">Images</a></li>
+                    <li><a href="animacoes.html">Animações</a></li>
+                    <li><a href="videoPage.html"class="active">Video</a></li>
+                </ul>
+
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li ><a href="index.html">Home</a></li>
+                    <li><a href="../lab3/index.html">Lab3</a></li>
+                    <li><a href="../lab2/index.html">Lab2</a></li>
+                    <li><a href="paralax.html" class="active" style="color: aliceblue;">Paralax</a></li>
+                    <li><a href="imagens.html" style="color: black">Images</a></li>
+                    <li><a href="animacoes.html">Animações</a></li>
+            </div>
+            <div class="site-header-mask">
+                <h1 class="site-title">History</h1>
+            </div>
+        </header>
+    </div>
+    <main style="background-color: #172044;">
+        <div class="container">
+            <div class="item3"></div>
+            <div class="item1">
+                <h2 class="section-title" style="color:white; font-size: 30px;">Paris, the boy in the ocean</h2>
+                <p style="color:white">Once upon a time, there was a curious traveler named Paris who had a burning
+                    desire to see all the
+                    creatures and cultures the world had to offer. Paris had traveled far and wide, from the plains
+                    of
+                    Africa to the jungles of South America, and had met people of all shapes and sizes, with
+                    different
+                    languages, traditions, and beliefs. <br><br>
+
+                    One day, Paris decided to embark on a new adventure to explore the sea. He set sail on a ship,
+                    and as
+                    he journeyed deeper into the ocean, he encountered a whole new world of creatures he had never
+                    seen
+                    before. He saw massive whales breaching the surface, playful dolphins leaping out of the water,
+                    and
+                    schools of colorful fish swimming beneath the waves. <br><br>
+
+                    As Paris traveled further into the sea, he met new people from different cultures who had made
+                    their
+                    homes by the shore. He learned about their unique ways of life, such as fishing for food and
+                    creating beautiful artwork using shells and seaweed. <br><br>
+
+                    Paris was particularly fascinated by the ancient city of Atlantis, a legendary place said to be
+                    located deep beneath the ocean. He heard stories from locals about the city's advanced
+                    technology
+                    and mythical creatures that lived there. <br><br>
+
+                    Despite the dangers of the sea, Paris continued his journey and encountered many challenges, such
+                    as
+                    rough storms and treacherous currents. But his perseverance paid off, and he discovered hidden
+                    coves
+                    and stunning coral reefs that were teeming with life. <br><br>
+
+                    One day, Paris stumbled upon a group of mermaids who welcomed him into their underwater kingdom.
+                    He
+                    was amazed by their beauty and grace, and he learned about their traditions and way of life.
+                    They
+                    even taught him how to communicate with sea creatures and showed him secret paths through the
+                    ocean. <br><br>
+
+                    As Paris journeyed back to land, he realized how much he had learned and how many new friends he
+                    had
+                    made. He knew that his travels had changed him, and he had a newfound appreciation for the world
+                    and
+                    its wonders. <br><br>
+
+                    When Paris finally returned home, he shared his stories and experiences with the people he met,
+                    inspiring them to embark on their own adventures and discover the magic of the world. And so,
+                    Paris's
+                    journey became a legend, inspiring generations of travelers to come.</p>
+            </div>
+            <div class="item2" ></div>
+        </div>
+    </main>
+    <footer style="display: flex; justify-content: center; align-items: center;">
+        <audio controls autoplay volume="0.1">
+            <source src="images/ocean waves sounds.mp3" type="audio/mp3">
+        </audio>
+    </footer>
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
